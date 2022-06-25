@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "64d59c12-2a5d-4580-bf8e-675609bb1c6b",
+		"name": "Stackpath",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16129690"
+	},
+	"item": [
+		{
+			"name": "GetPeople",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPeopleByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/people?first_name=John&last_name=Doe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "John"
+						},
+						{
+							"key": "last_name",
+							"value": "Doe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPeopleByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/people/81eb745b-3aae-400b-959f-748fcafafd81",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people",
+						"81eb745b-3aae-400b-959f-748fcafafd81"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPeopleByPhoneNumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/people?phone_number=+447700900077",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people"
+					],
+					"query": [
+						{
+							"key": "phone_number",
+							"value": "+447700900077"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPeopleByIDFail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/people",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"people"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
