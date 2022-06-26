@@ -15,5 +15,14 @@ type SimplePool interface {
 // concurrent tasks to run at any one time. maxConcurrent must be greater than
 // zero.
 func NewSimplePool(maxConcurrent int) SimplePool {
-	panic("TODO")
+	if maxConcurrent <= 0 {
+		return nil
+	}
+	for _, _ := range maxConcurrent {
+		go func() {
+			var f SimplePool
+			f:=SimplePool{}
+			f.Submit()
+		}
+	}
 }
